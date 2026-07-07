@@ -11,7 +11,7 @@ Ready to paste (or for Claude to push via the Shopify connector).
 
 ## Product type / vendor
 - Type: `Digital Download`
-- Vendor: `The Eldwyld Archives`
+- Vendor: `SpiralSightedVisions`
 
 ## Tags
 `printable grimoire, grimoire pages, book of shadows, botanical journal, foraging journal, herbalism printable, witch printable, green witch, hedge witch, cottagecore, wheel of the year, moon tracker, plant profile, digital download, witchy stationery, herbal grimoire, wildcrafting, printable journal`
@@ -22,7 +22,7 @@ Ready to paste (or for Claude to push via the Shopify connector).
 <p><em>A working book for the green-inclined — print it, bind it, spill tea on it.</em></p>
 
 <p>The Forager's Grimoire is a 23-page printable botanical journal &amp; grimoire kit from
-The Eldwyld Archives, designed for foragers, hedge-crafters, green witches, and anyone
+SpiralSightedVisions, designed for foragers, hedge-crafters, green witches, and anyone
 keeping their own book of green knowledge. Every page is undated and endlessly reprintable
 — buy once, print forever.</p>
 
@@ -47,7 +47,7 @@ keeping their own book of green knowledge. Every page is undated and endlessly r
 <p><em>Personal use license. Nothing herein is medical advice; forage with certainty and care.
 Misidentification can be dangerous — always confirm with an up-to-date regional field guide.</em></p>
 
-<p>✦ From The Eldwyld Archives — where the mystical and the digital converge. ✦</p>
+<p>✦ From SpiralSightedVisions — where the mystical and the digital converge. ✦</p>
 ```
 
 ## Images (in order)

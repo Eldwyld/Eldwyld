@@ -18,7 +18,7 @@ EDITIONS = {
 
 HEAD = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
-<title>The Forager's Grimoire — The Eldwyld Archives</title>
+<title>The Forager's Grimoire — SpiralSightedVisions</title>
 <link rel="stylesheet" href="../src/fonts/fonts-local.css">
 <style>{css}</style>
 </head><body>

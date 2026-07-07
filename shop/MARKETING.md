@@ -5,7 +5,7 @@ Discovery happens on **Pinterest search** (evergreen, compounding — a good pin
 keeps sending traffic for years) with Instagram/TikTok as amplifiers.
 
 ## Pinterest setup (once, ~15 min)
-1. Business account for **Eldwyld** (free) → claim `eldwyld.com`.
+1. Business account for **SpiralSightedVisions** (free) → claim the shop domain once one exists.
 2. Boards: `Grimoire Pages & Book of Shadows` · `Green Witch Printables` ·
    `Foraging & Wildcrafting` · `Cottagecore Stationery` · `Wheel of the Year & Moon Magic`.
 3. Pin the ready-made images (in `forager-grimoire/dist/`):
@@ -27,7 +27,7 @@ keeps sending traffic for years) with Instagram/TikTok as amplifiers.
 
 **Pin 2 — plant profile page**
 - Title: `Plant Profile & Herb Journal Pages — Printable Materia for Your Grimoire`
-- Desc: `Build your own herbal materia: fill-in plant profile pages with correspondences, cautions & pressed-specimen box. Part of The Forager's Grimoire, 23 printable pages from The Eldwyld Archives. #herbalism #witchyprintables #botanicaljournal`
+- Desc: `Build your own herbal materia: fill-in plant profile pages with correspondences, cautions & pressed-specimen box. Part of The Forager's Grimoire, 23 printable pages from SpiralSightedVisions. #herbalism #witchyprintables #botanicaljournal`
 
 **Pin 3 — moon tracker**
 - Title: `Undated Moon Phase Tracker Printable — Print Twelve for a Year of Moons`

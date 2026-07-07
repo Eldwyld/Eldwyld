@@ -8,7 +8,7 @@
 
 ## Product type / vendor
 - Type: `Digital Download`
-- Vendor: `The Eldwyld Archives`
+- Vendor: `SpiralSightedVisions`
 
 ## Tags
 `witch planner, undated planner, printable planner, sabbat planner, wheel of the year, moon planner, pagan planner, book of shadows, grimoire planner, green witch, witchy printable, wiccan calendar, moon phase tracker, habit tracker printable, digital download, witchy stationery, samhain, yule`
@@ -19,7 +19,7 @@
 <p><em>No printed dates, no wasted Januaries — a planner that begins whenever you do,
 and lasts as long as you keep it.</em></p>
 
-<p>The Witch's Almanac is Volume II of the Eldwyld Archives: a 23-page undated planner
+<p>The Witch's Almanac is Volume II from SpiralSightedVisions: a 23-page undated planner
 built around the wheel of the year. Print twelve month grids, a weekly page for every
 week you plan on paper, and daily pages for the thick of things — this year, next year,
 every year. Buy once, print forever.</p>
@@ -45,7 +45,7 @@ every year. Buy once, print forever.</p>
 
 <p><em>Personal use license: print all you like, forever, for you and for gifts.</em></p>
 
-<p>✦ From The Eldwyld Archives — where the mystical and the digital converge. ✦</p>
+<p>✦ From SpiralSightedVisions — where the mystical and the digital converge. ✦</p>
 ```
 
 ## Images (in order)

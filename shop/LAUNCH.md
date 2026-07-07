@@ -1,4 +1,4 @@
-# Eldwyld Shop — Launch Runbook
+# SpiralSightedVisions Shop — Launch Runbook
 
 Goal: **$1/day passive** ($30/mo). First product: The Forager's Grimoire at $9
 → ~3–4 sales/month to hit target.
@@ -14,7 +14,7 @@ Goal: **$1/day passive** ($30/mo). First product: The Forager's Grimoire at $9
 - [ ] Digital delivery attached to each (Shopify Digital Downloads app — manual, ~3 min each)
 - [ ] Products set ACTIVE + on Online Store channel
 - [ ] First 5 pins posted to Pinterest (see MARKETING.md)
-- [ ] Next build: **Wyld Marks sticker sheets** ($6), then **Samhain Papers** capsule (Sept)
+- [ ] Next build: **SpiralSighted Marks sticker sheets** ($6), then **Samhain Papers** capsule (Sept)
 
 ## Step 1 — Reconnect Shopify (Ellis, ~1 min)
 The connector token expired mid-session. Re-authorize the Shopify connector in
@@ -28,7 +28,7 @@ claude.ai → Settings → Connectors, then tell Claude **"go"** in a session wi
    - `.../dist/pages/page-01.png`, `page-07.png`, `page-05.png`, `page-11.png`, `page-06.png`
 3. Variant: single, price 9.00, compare-at 14.00, SKU `ELD-GRIM-001`,
    **untracked inventory**, and (via GraphQL) `requiresShipping: false`.
-4. Create collection "The Eldwyld Archives — Printables" and add the product.
+4. Create collection "SpiralSightedVisions — Printables" and add the product.
 
 ## Step 3 — Digital delivery (Ellis, ~3 min, one time)
 1. Shopify admin → Apps → search **"Digital Downloads"** (free, by Shopify) → install.
@@ -50,8 +50,8 @@ surface in search for years). Full plan + ready-made captions: `MARKETING.md`.
 ## Path past $1/day
 Same pipeline, more SKUs (each reuses the design system in `src/`):
 1. **The Witch's Planner** (undated weekly + sabbats) — $12
-2. **Worldbuilder's Codex** (worldbuilding template pack — taps the other half
-   of the Eldwyld brand) — $9
+2. **Worldbuilder's Codex** (worldbuilding template pack — taps the
+   worldbuilding side of the house) — $9
 3. **Bundle all three** — $24 ("The Archivist's Bundle")
 4. Etsy as a second channel once 2–3 SKUs exist (Etsy brings its own search
-   traffic; $0.20/listing + fees, listings can point buyers to eldwyld.com).
+   traffic; $0.20/listing + fees, listings can point buyers to spiralsightedvisions).
