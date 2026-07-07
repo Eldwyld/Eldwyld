@@ -1,0 +1,53 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../fonts/fonts-local.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { width:2000px; height:2000px; overflow:hidden; }
+body {
+  background:
+    radial-gradient(1600px 1200px at 50% -10%, #232a20 0%, #171c15 55%, #0f120e 100%);
+  color:#ece4d2;
+  font-family:'Cormorant Garamond', serif;
+  position:relative;
+}
+.frame { position:absolute; inset:56px; border:2px solid #8d7a55; }
+.frame::before { content:''; position:absolute; inset:14px; border:1px solid #55492f; }
+.star { position:absolute; color:#b49a6d; opacity:.9; }
+.wrap { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; text-align:center; padding:150px 120px 120px; }
+.kicker { font-family:'Cinzel', serif; font-size:34px; letter-spacing:.42em; color:#b49a6d; text-transform:uppercase; }
+h1 { font-family:'Cinzel Decorative', serif; font-weight:400; font-size:128px; line-height:1.08; margin:28px 0 18px; color:#f3ecdb;
+     font-variant-ligatures:none; font-feature-settings:'liga' 0,'dlig' 0; }
+.sub { font-family:'IM Fell English', serif; font-style:italic; font-size:44px; color:#c9bda1; }
+.mock { position:relative; flex:1; width:100%; margin-top:40px; }
+.mock img { position:absolute; box-shadow:0 42px 90px rgba(0,0,0,.65); border-radius:4px; }
+.pgL { width:560px; left:210px; top:96px; transform:rotate(-8deg); }
+.pgR { width:560px; right:210px; top:88px; transform:rotate(7.5deg); }
+.cov { width:640px; left:50%; top:18px; transform:translateX(-50%) rotate(-1.5deg); z-index:2; }
+.badges { display:flex; gap:34px; justify-content:center; margin-top:26px; z-index:3; }
+.badge { font-family:'Cinzel', serif; font-size:29px; letter-spacing:.22em; text-transform:uppercase;
+  color:#d8cbaa; border:1.5px solid #7c6a48; padding:20px 38px; background:rgba(15,18,14,.72); }
+.brand { margin-top:34px; font-family:'Cinzel', serif; font-size:30px; letter-spacing:.4em; color:#8d7a55; text-transform:uppercase; }
+</style></head><body>
+<div class="frame"></div>
+<svg class="star" style="left:250px;top:250px" width="46" height="46" viewBox="0 0 100 100"><path d="M50 8 C52.5 37 63 47.5 92 50 C63 52.5 52.5 63 50 92 C47.5 63 37 52.5 8 50 C37 47.5 47.5 37 50 8 Z" fill="currentColor"/></svg>
+<svg class="star" style="right:290px;top:330px" width="30" height="30" viewBox="0 0 100 100"><path d="M50 8 C52.5 37 63 47.5 92 50 C63 52.5 52.5 63 50 92 C47.5 63 37 52.5 8 50 C37 47.5 47.5 37 50 8 Z" fill="currentColor"/></svg>
+<svg class="star" style="left:420px;top:170px" width="22" height="22" viewBox="0 0 100 100"><path d="M50 8 C52.5 37 63 47.5 92 50 C63 52.5 52.5 63 50 92 C47.5 63 37 52.5 8 50 C37 47.5 47.5 37 50 8 Z" fill="currentColor"/></svg>
+<svg class="star" style="right:420px;top:180px;color:#77684a" width="26" height="26" viewBox="0 0 100 100"><path d="M50 8 C52.5 37 63 47.5 92 50 C63 52.5 52.5 63 50 92 C47.5 63 37 52.5 8 50 C37 47.5 47.5 37 50 8 Z" fill="currentColor"/></svg>
+<div class="wrap">
+  <p class="kicker">The Eldwyld Archives</p>
+  <h1>The Forager's<br>Grimoire</h1>
+  <p class="sub">a printable botanical journal for wildcrafting &amp; hedge-craft</p>
+  <div class="mock">
+    <img class="pgL" src="../../dist/pages/page-07.png">
+    <img class="pgR" src="../../dist/pages/page-06.png">
+    <img class="cov" src="../../dist/pages/page-01.png">
+  </div>
+  <div class="badges">
+    <span class="badge">23 Pages</span>
+    <span class="badge">US Letter + A4</span>
+    <span class="badge">Print Forever</span>
+  </div>
+  <p class="brand">✦ eldwyld.com ✦</p>
+</div>
+</body></html>

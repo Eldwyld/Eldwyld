@@ -1,0 +1,281 @@
+/* ═══════════════════════════════════════════════════════════════
+   The Forager's Grimoire — print design system
+   The Eldwyld Archives · eldwyld.com
+   Page size tokens __PAGE_W__ / __PAGE_H__ are injected by build.py
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --ink: #2b2620;          /* warm near-black */
+  --ink-soft: #55493a;     /* softened ink for body text */
+  --bronze: #7a6a4f;       /* aged bronze accent */
+  --faint: #a99a83;        /* hairlines, ruled lines */
+  --whisper: #cfc4b0;      /* faintest rules / dots */
+  --paper: #fdfcf8;        /* near-white, ink-friendly */
+  --moss: #4f5a44;         /* deep moss green accent */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page { size: __PAGE_SIZE__; margin: 0; }
+
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', 'Liberation Serif', serif;
+  font-size: 12.5pt;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+svg { display: block; }
+.art { color: var(--bronze); }
+.art-faint { color: var(--whisper); }
+.art-ink { color: var(--ink); }
+
+/* ── page chrome ─────────────────────────────────────────────── */
+
+.page {
+  width: __PAGE_W__;
+  height: __PAGE_H__;
+  page-break-after: always;
+  break-after: page;
+  position: relative;
+  background: var(--paper);
+  padding: 0.62in 0.66in 0.55in;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  counter-increment: pg;
+}
+.page:last-child { page-break-after: auto; }
+
+/* double-rule frame with corner flourishes */
+.frame {
+  position: absolute;
+  inset: 0.34in;
+  border: 0.75pt solid var(--bronze);
+  pointer-events: none;
+}
+.frame::before {
+  content: '';
+  position: absolute;
+  inset: 3.5pt;
+  border: 0.5pt solid var(--faint);
+}
+.corner {
+  position: absolute;
+  width: 34pt; height: 34pt;
+  color: var(--bronze);
+}
+.corner.tl { top: -6pt;   left: -6pt; }
+.corner.tr { top: -6pt;   right: -6pt;  transform: scaleX(-1); }
+.corner.bl { bottom: -6pt; left: -6pt;  transform: scaleY(-1); }
+.corner.br { bottom: -6pt; right: -6pt; transform: scale(-1,-1); }
+
+/* header + footer */
+.page-head { text-align: center; margin-bottom: 11pt; }
+.page-head .kicker {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: 9.5pt;
+  color: var(--bronze);
+  letter-spacing: 0.06em;
+  margin-bottom: 2pt;
+}
+.page-head h2 {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+  font-size: 17pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.page-head .divider { width: 200pt; margin: 6pt auto 0; color: var(--bronze); }
+
+.page-foot {
+  margin-top: auto;
+  padding-top: 8pt;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 6.8pt;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.page-foot .no { color: var(--bronze); }
+.page-foot .no::after { content: counter(pg); }
+
+/* ── shared content atoms ─────────────────────────────────────── */
+
+.flavor {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 11.5pt;
+  line-height: 1.5;
+}
+
+.label {
+  font-family: 'Cinzel', serif;
+  font-size: 8pt;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
+
+/* single fill-in line: label + rule */
+.field { display: flex; align-items: baseline; gap: 6pt; margin: 7pt 0; }
+.field .label { white-space: nowrap; }
+.field .rule { flex: 1; border-bottom: 0.6pt solid var(--faint); height: 13pt; }
+
+.field-row { display: flex; gap: 14pt; }
+.field-row .field { flex: 1; }
+
+/* ruled writing lines */
+.lines {
+  background-image: repeating-linear-gradient(
+    to bottom, transparent, transparent 19.4pt,
+    var(--faint) 19.4pt, var(--faint) 20pt);
+  min-height: 60pt;
+}
+.lines.tight {
+  background-image: repeating-linear-gradient(
+    to bottom, transparent, transparent 16.4pt,
+    var(--faint) 16.4pt, var(--faint) 17pt);
+}
+
+/* dot grid */
+.dots {
+  background-image: radial-gradient(circle at 1pt 1pt, var(--whisper) 0.9pt, transparent 1pt);
+  background-size: 14pt 14pt;
+}
+
+/* boxes */
+.box {
+  border: 0.6pt solid var(--faint);
+  padding: 8pt 10pt;
+}
+.box .label { display: block; margin-bottom: 4pt; }
+.sketchbox {
+  border: 0.6pt solid var(--faint);
+  position: relative;
+}
+.sketchbox .label {
+  position: absolute; top: 5pt; left: 8pt;
+}
+
+/* tables */
+table.gm { width: 100%; border-collapse: collapse; }
+table.gm th {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+  font-size: 7.8pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bronze);
+  text-align: left;
+  padding: 3pt 6pt;
+  border-bottom: 0.9pt solid var(--bronze);
+}
+table.gm td {
+  border-bottom: 0.55pt solid var(--whisper);
+  height: 21pt;
+  padding: 2pt 6pt;
+}
+
+/* checklist */
+.check { display: flex; align-items: baseline; gap: 7pt; margin: 5.5pt 0; line-height: 1.35; }
+.check .tick {
+  flex: none;
+  width: 8.5pt; height: 8.5pt;
+  border: 0.7pt solid var(--bronze);
+  transform: translateY(1pt) rotate(45deg);
+}
+.check p { font-size: 11.5pt; color: var(--ink-soft); }
+.check p b { color: var(--ink); font-weight: 600; }
+
+/* two-column helper */
+.cols { display: flex; gap: 16pt; }
+.cols > div { flex: 1; }
+
+/* stretch a final writing block to the footer */
+.fill { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+.fill .lines { flex: 1; margin-top: 4pt; }
+
+/* section ornament between blocks */
+.orn { display: flex; justify-content: center; margin: 9pt 0; color: var(--bronze); }
+
+/* ── cover ────────────────────────────────────────────────────── */
+
+.cover { justify-content: center; text-align: center; }
+.cover .arch { margin: 0 auto 4pt; color: var(--bronze); }
+.cover h1 {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-weight: 400;
+  font-size: 34pt;
+  line-height: 1.22;
+  letter-spacing: 0.06em;
+  margin: 10pt 0 6pt;
+  font-variant-ligatures: none;
+  font-feature-settings: 'liga' 0, 'dlig' 0;
+}
+.cover .sub {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: 13.5pt;
+  color: var(--ink-soft);
+  margin-bottom: 4pt;
+}
+.cover .imprint {
+  margin-top: 26pt;
+  font-family: 'Cinzel', serif;
+  font-size: 8.5pt;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
+
+/* ── page-specific ────────────────────────────────────────────── */
+
+/* wheel of the year */
+.wheel-wrap { display: flex; justify-content: center; margin: 2pt 0 8pt; }
+.sabbats { display: grid; grid-template-columns: 1fr 1fr; gap: 4pt 18pt; }
+.sabbat { display: flex; align-items: baseline; gap: 6pt; }
+.sabbat .name { font-family: 'Cinzel', serif; font-size: 9.5pt; letter-spacing: 0.08em; }
+.sabbat .date { font-family: 'IM Fell English', serif; font-style: italic; font-size: 9.5pt; color: var(--bronze); white-space: nowrap; }
+.sabbat .rule { flex: 1; border-bottom: 0.55pt solid var(--whisper); }
+
+/* moon tracker */
+.phases { display: flex; justify-content: space-between; margin: 6pt 2pt 2pt; }
+.phase { text-align: center; width: 11.5%; }
+.phase svg { margin: 0 auto 3pt; color: var(--ink); }
+.phase .nm { font-family: 'Cinzel', serif; font-size: 6.4pt; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+.phase .dt { border-bottom: 0.55pt solid var(--faint); height: 12pt; margin-top: 3pt; }
+
+/* recipe cards */
+.card {
+  border: 0.7pt solid var(--bronze);
+  padding: 10pt 12pt 12pt;
+  position: relative;
+}
+.card + .card { margin-top: 14pt; }
+.card .card-title {
+  font-family: 'Cinzel', serif; font-size: 10.5pt; letter-spacing: 0.12em;
+  text-transform: uppercase; text-align: center; margin-bottom: 6pt; color: var(--ink);
+}
+
+/* sigil circles */
+.sigil-drafts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10pt; justify-items: center; }
+.circle {
+  border: 0.6pt solid var(--faint);
+  border-radius: 50%;
+}
+
+/* license page */
+.license p { font-size: 11pt; line-height: 1.55; color: var(--ink-soft); margin: 6pt 0; }
+.license h3 {
+  font-family: 'Cinzel', serif; font-weight: 400; font-size: 10.5pt;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink);
+  margin: 12pt 0 3pt;
+}
