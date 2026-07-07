@@ -1,0 +1,56 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../fonts/fonts-local.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { width:__W__px; height:__H__px; overflow:hidden; }
+body {
+  background:
+    radial-gradient(90% 70% at 50% 0%, #ddd3f2 0%, #cfc3e8 55%, #b9a8dd 100%);
+  position:relative;
+  font-family:'Comic Neue', sans-serif;
+}
+.grain { position:absolute; inset:0; opacity:0.10; pointer-events:none; }
+.ht { position:absolute; width:520px; height:520px; border-radius:50%;
+  background-image: radial-gradient(circle at 3px 3px, #8f7fc0 2.1px, transparent 2.6px);
+  background-size: 13px 13px; opacity:0.5;
+  -webkit-mask-image: radial-gradient(circle, black 30%, transparent 70%);
+  mask-image: radial-gradient(circle, black 30%, transparent 70%);
+}
+.wrap { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; text-align:center; padding:__PAD__; }
+.titlebox { position:relative; z-index:5; }
+.sub { font-weight:700; font-size:__SUBF__px; color:#2b2350; letter-spacing:0.06em; margin-top:6px; z-index:5; }
+.scatter { position:relative; flex:1; width:100%; z-index:2; }
+.scatter svg { position:absolute; filter: drop-shadow(0 18px 26px rgba(43,35,80,0.35)); }
+.badge { z-index:5; font-family:'Gochi Hand', cursive; font-size:__BADGEF__px; color:#2b2350;
+  background:#f2c230; border:5px solid #2a2438; border-radius:14px;
+  padding:14px 44px; transform:rotate(-2deg);
+  box-shadow: 8px 10px 0 rgba(43,35,80,0.4); }
+.brand { z-index:5; font-weight:700; font-size:__BRANDF__px; letter-spacing:0.32em; color:#2b2350;
+  text-transform:uppercase; margin-top:26px; }
+.fx { position:absolute; z-index:4; font-family:'Gochi Hand',cursive; color:#2b2350; }
+</style></head><body>
+{{DEFS}}
+<svg class="grain" width="100%" height="100%">
+  <filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/>
+  <feColorMatrix type="saturate" values="0"/></filter>
+  <rect width="100%" height="100%" filter="url(#gr)"/>
+</svg>
+<div class="ht" style="left:-160px; top:-140px"></div>
+<div class="ht" style="right:-180px; bottom:-160px"></div>
+<div class="wrap">
+  <div class="titlebox">
+    <svg width="__TITLEW__" height="__TITLEH__" viewBox="0 0 1000 __TVB__">
+      <text x="500" y="__TY1__" text-anchor="middle" font-family="'Gochi Hand',cursive" font-size="__TF__"
+            fill="#2b2350" stroke="#ffffff" stroke-width="26" paint-order="stroke" stroke-linejoin="round">SpiralSighted</text>
+      <text x="500" y="__TY2__" text-anchor="middle" font-family="'Gochi Hand',cursive" font-size="__TF__"
+            fill="#2b2350" stroke="#ffffff" stroke-width="26" paint-order="stroke" stroke-linejoin="round">Marks ✦</text>
+      <path d="M330 __UY__ C420 __UY2__ 580 __UY2__ 670 __UY__" fill="none" stroke="#e03131" stroke-width="10" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <p class="sub">__SUBTEXT__</p>
+  <div class="scatter">__SCATTER__</div>
+  <p class="badge">instant download · print &amp; cut forever</p>
+  <p class="brand">✦ SpiralSightedVisions ✦</p>
+</div>
+</body></html>

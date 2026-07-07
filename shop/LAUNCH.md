@@ -14,7 +14,9 @@ Goal: **$1/day passive** ($30/mo). First product: The Forager's Grimoire at $9
 - [ ] Digital delivery attached to each (Shopify Digital Downloads app — manual, ~3 min each)
 - [ ] Products set ACTIVE + on Online Store channel
 - [ ] First 5 pins posted to Pinterest (see MARKETING.md)
-- [ ] Next build: **SpiralSighted Marks sticker sheets** ($6), then **Samhain Papers** capsule (Sept)
+- [x] **SpiralSighted Marks** built: 12 witchpunk stickers, sheet PDFs + transparent PNGs, zip, images, listing ($6)
+- [ ] Bundle: **Almanac + Marks** at $15 (Claude, once both live)
+- [ ] Next build: **Samhain Papers** capsule (Sept)
 
 ## Step 1 — Reconnect Shopify (Ellis, ~1 min)
 The connector token expired mid-session. Re-authorize the Shopify connector in

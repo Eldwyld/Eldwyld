@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>SpiralSighted Marks — Sigils &amp; Specimens</title>
+<link rel="stylesheet" href="../src/fonts/fonts-local.css">
+<style>/* SpiralSighted Marks — sticker sheet print styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page { size: 210mm 297mm; margin: 0; }
+
+html, body {
+  background: #f5f2fb;
+  font-family: 'Comic Neue', sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  page-break-after: always;
+  break-after: page;
+  position: relative;
+  background: #f5f2fb;
+  padding: 0.5in 0.55in 0.42in;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.page:last-child { page-break-after: auto; }
+
+.sheet-head { text-align: center; margin-bottom: 4pt; }
+.sheet-head h1 {
+  font-family: 'Gochi Hand', cursive;
+  font-weight: 400;
+  font-size: 26pt;
+  color: #2b2350;
+  letter-spacing: 0.02em;
+}
+.sheet-head h1 .fx { color: #e03131; }
+.sheet-head p {
+  font-family: 'Comic Neue', sans-serif;
+  font-weight: 700;
+  font-size: 9pt;
+  color: #8f7fc0;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 1pt;
+}
+
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 4pt 10pt;
+}
+.grid svg { display: block; }
+.r1 { transform: rotate(-4deg); }
+.r2 { transform: rotate(3deg); }
+.r3 { transform: rotate(-2deg); }
+.r4 { transform: rotate(5deg); }
+.wide { grid-column: 1 / -1; }
+
+.sheet-foot {
+  margin-top: 4pt;
+  text-align: center;
+  font-family: 'Comic Neue', sans-serif;
+  font-weight: 700;
+  font-size: 8.5pt;
+  color: #2b2350;
+}
+.sheet-foot .hand {
+  font-family: 'Gochi Hand', cursive;
+  font-weight: 400;
+  color: #8f7fc0;
+  font-size: 10pt;
+}
+</style>
+</head><body>
+<!-- SpiralSighted Marks · witchpunk sticker library
+     Every sticker: halftone drop-shadow → white die-cut blob → wobbly art. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+
+    <!-- ── palette patterns ── -->
+    <pattern id="ht-night" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="3.5" cy="3.5" r="1.7" fill="#2b2350" opacity="0.32"/>
+    </pattern>
+    <pattern id="ht-lav" width="6.5" height="6.5" patternUnits="userSpaceOnUse">
+      <circle cx="3.2" cy="3.2" r="1.5" fill="#8f7fc0" opacity="0.55"/>
+    </pattern>
+    <pattern id="ht-gold" width="6.5" height="6.5" patternUnits="userSpaceOnUse">
+      <circle cx="3.2" cy="3.2" r="1.5" fill="#d99a1e" opacity="0.5"/>
+    </pattern>
+    <pattern id="ht-red" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.3" fill="#e03131" opacity="0.45"/>
+    </pattern>
+
+    <!-- ── shared bits ── -->
+    <symbol id="sp4" viewBox="0 0 100 100">
+      <path d="M50 5 C56 33 67 44 95 50 C67 56 56 67 50 95 C44 67 33 56 5 50 C33 44 44 33 50 5 Z" fill="currentColor"/>
+    </symbol>
+    <g id="goo">
+      <ellipse cx="0" cy="0" rx="13" ry="8" fill="#fff" opacity="0.92" transform="rotate(-18)"/>
+      <circle cx="16" cy="9" r="4" fill="#fff" opacity="0.92"/>
+    </g>
+    <g id="lid-eye">
+      <!-- heavy-lidded eye, origin at eye center, ~34 wide -->
+      <circle cx="0" cy="3" r="7.5" fill="#2a2438"/>
+      <path d="M-15 0 Q0 -12 15 0 L15 -3 Q0 -14 -15 -3 Z" fill="#2a2438"/>
+      <path d="M-15 0 Q0 -12 15 0" fill="none" stroke="#2a2438" stroke-width="5" stroke-linecap="round"/>
+      <path d="M15 -1 L21 -5 M13 -5 L18 -10" stroke="#2a2438" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="2.5" cy="4.5" r="2.2" fill="#fff"/>
+    </g>
+    <g id="googly">
+      <circle cx="0" cy="0" r="14" fill="#fff" stroke="#2a2438" stroke-width="4"/>
+      <circle cx="4" cy="5" r="6" fill="#2a2438"/>
+      <circle cx="6" cy="3" r="1.8" fill="#fff"/>
+    </g>
+
+    <!-- ══ 1 · CRESCENT MOON ══ -->
+    <path id="bl-moon" d="M118 8 C160 12 186 44 189 88 C192 132 172 172 136 190 C118 199 96 197 84 188 C104 178 86 172 96 164 C60 152 40 118 44 78 C48 40 76 12 118 8 Z"/>
+    <symbol id="st-moon" viewBox="-14 -14 232 240">
+      <use href="#bl-moon" transform="translate(7,10)" fill="url(#ht-night)"/>
+      <use href="#bl-moon" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+      <path d="M128 22 C94 28 70 58 71 96 C72 134 98 162 130 170 C112 148 102 126 102 98 C102 68 112 42 128 22 Z"
+            fill="#cfc3e8" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M112 132 C106 146 116 158 126 166 C114 150 112 142 112 132 Z" fill="url(#ht-lav)" stroke="none"/>
+      <path d="M130 170 C126 180 134 183 131 192 C127 199 119 195 121 187 C123 181 127 177 130 170 Z"
+            fill="#cfc3e8" stroke="#2a2438" stroke-width="4" stroke-linejoin="round"/>
+      <use href="#lid-eye" transform="translate(96,84) scale(0.72)"/>
+      <path d="M88 112 Q94 117 100 113" fill="none" stroke="#2a2438" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="82" cy="102" r="6" fill="url(#ht-red)"/>
+      <use href="#goo" transform="translate(112,44)"/>
+      <use href="#sp4" x="140" y="52" width="26" height="26" color="#f2c230"/>
+      <use href="#sp4" x="148" y="104" width="20" height="20" color="#8f7fc0"/>
+      <use href="#sp4" x="132" y="136" width="15" height="15" color="#f2c230"/>
+      <use href="#sp4" x="158" y="146" width="11" height="11" color="#35d0c0"/>
+    </symbol>
+
+    <!-- ══ 2 · FULL MOON FACE ══ -->
+    <path id="bl-fullmoon" d="M104 6 C158 4 196 44 198 98 C200 152 158 196 104 197 C50 198 8 156 8 102 C8 48 50 8 104 6 Z"/>
+    <symbol id="st-fullmoon" viewBox="-14 -14 234 234">
+      <use href="#bl-fullmoon" transform="translate(7,10)" fill="url(#ht-night)"/>
+      <use href="#bl-fullmoon" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+      <path d="M103 22 C146 20 178 52 180 96 C182 140 148 178 104 179 C60 180 26 148 26 104 C26 60 60 24 103 22 Z"
+            fill="#f3ead8" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M52 140 C74 166 122 172 152 148 C136 172 96 180 68 166 C58 160 54 150 52 140 Z" fill="url(#ht-lav)"/>
+      <circle cx="62" cy="66" r="9" fill="url(#ht-lav)"/>
+      <circle cx="148" cy="56" r="6" fill="url(#ht-lav)"/>
+      <circle cx="146" cy="130" r="7" fill="url(#ht-lav)"/>
+      <use href="#lid-eye" transform="translate(78,92) scale(0.85)"/>
+      <use href="#lid-eye" transform="translate(132,92) scale(-0.85,0.85)"/>
+      <path d="M98 118 Q105 124 112 118" fill="none" stroke="#2a2438" stroke-width="4.5" stroke-linecap="round"/>
+      <circle cx="62" cy="110" r="7" fill="url(#ht-red)"/>
+      <circle cx="148" cy="110" r="7" fill="url(#ht-red)"/>
+      <use href="#goo" transform="translate(72,44)"/>
+      <use href="#sp4" x="162" y="26" width="20" height="20" color="#f2c230"/>
+    </symbol>
+
+    <!-- ══ 3 · MELTING STAR ══ -->
+    <path id="bl-star" d="M102 4 C112 4 122 26 132 44 C152 46 176 48 180 60 C184 72 166 88 154 102 C158 122 164 146 152 154 C144 160 124 150 104 142 C84 152 62 162 52 154 C42 146 48 122 52 102 C40 88 22 72 26 60 C30 48 54 46 74 44 C84 26 92 4 102 4 Z"/>
+    <symbol id="st-star" viewBox="-14 -14 232 246">
+      <use href="#bl-star" transform="translate(7,10)" fill="url(#ht-night)"/>
+      <use href="#bl-star" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+      <path d="M102 20 C110 20 116 38 124 52 C140 54 158 56 161 65 C164 74 151 85 141 96 C144 112 148 130 139 136 C132 141 118 134 103 128 C88 134 74 141 67 136 C58 130 62 112 65 96 C55 85 42 74 45 65 C48 56 66 54 82 52 C90 38 94 20 102 20 Z"
+            fill="#f2c230" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M67 136 C64 150 70 158 66 170 C62 180 52 177 54 168 C56 158 60 148 62 138 Z"
+            fill="#f2c230" stroke="#2a2438" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M139 136 C140 146 136 152 138 160 C140 169 150 167 148 158 C146 150 142 144 142 136 Z"
+            fill="#f2c230" stroke="#2a2438" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M84 118 C96 126 112 126 124 116 C114 132 92 132 84 118 Z" fill="url(#ht-gold)"/>
+      <use href="#lid-eye" transform="translate(86,82) scale(0.7)"/>
+      <use href="#lid-eye" transform="translate(120,82) scale(-0.7,0.7)"/>
+      <path d="M96 102 Q103 107 110 102" fill="none" stroke="#2a2438" stroke-width="4" stroke-linecap="round"/>
+      <use href="#goo" transform="translate(84,52) scale(0.8)"/>
+      <use href="#sp4" x="152" y="18" width="20" height="20" color="#8f7fc0"/>
+    </symbol>
+
+    <!-- ══ 4 · SIGIL BADGE ══ -->
+    <path id="bl-sigil" d="M102 6 C156 4 194 44 196 98 C198 152 156 194 102 195 C48 196 8 154 8 100 C8 46 48 8 102 6 Z"/>
+    <symbol id="st-sigil" viewBox="-14 -14 234 234">
+      <use href="#bl-sigil" transform="translate(7,10)" fill="url(#ht-night)"/>
+      <use href="#bl-sigil" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+      <path d="M102 20 C146 18 180 52 182 96 C184 140 146 180 102 181 C58 182 22 148 22 102 C22 56 58 22 102 20 Z"
+            fill="#e9e2f6" stroke="#2a2438" stroke-width="5"/>
+      <path d="M102 34 C138 32 166 60 168 96 C170 132 138 166 102 167 C66 168 36 138 36 102 C36 66 66 36 102 34 Z"
+            fill="none" stroke="#2b2350" stroke-width="3.5" stroke-dasharray="1 9" stroke-linecap="round"/>
+      <path d="M102 52 C104 74 104 128 102 150 M74 76 C94 96 112 96 132 74 M70 122 Q102 100 134 124"
+            fill="none" stroke="#2b2350" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="102" cy="101" r="9" fill="none" stroke="#2b2350" stroke-width="4.5"/>
+      <circle cx="102" cy="52" r="4.5" fill="#e03131"/>
+      <circle cx="70" cy="122" r="4" fill="#35d0c0"/>
+      <circle cx="134" cy="124" r="4" fill="#35d0c0"/>
+      <path d="M96 142 Q102 148 108 142" fill="none" stroke="#2b2350" stroke-width="4" stroke-linecap="round"/>
+      <use href="#sp4" x="92" y="8" width="21" height="21" color="#f2c230"/>
+      <use href="#goo" transform="translate(62,44) scale(0.7)"/>
+    </symbol>
+
+    <!-- ══ 5 · BANNER · TRUST THE SPIRAL ══ -->
+    <path id="bl-banner" d="M26 34 C108 24 208 24 288 34 C296 52 296 74 290 92 C206 102 106 102 24 92 C18 74 18 52 26 34 Z"/>
+    <symbol id="st-banner" viewBox="-16 -20 348 168">
+      <use href="#bl-banner" transform="translate(6,9)" fill="url(#ht-night)"/>
+      <use href="#bl-banner" fill="#fff" stroke="#fff" stroke-width="15" stroke-linejoin="round"/>
+      <path d="M56 48 L26 42 L42 64 L30 86 L58 80 Z" fill="#8f7fc0" stroke="#2a2438" stroke-width="4.5" stroke-linejoin="round"/>
+      <path d="M260 48 L290 42 L274 64 L286 86 L258 80 Z" fill="#8f7fc0" stroke="#2a2438" stroke-width="4.5" stroke-linejoin="round"/>
+      <path d="M38 40 C112 30 202 30 278 40 C284 54 284 70 279 84 C204 94 110 94 36 84 C31 70 31 54 38 40 Z"
+            fill="#f3ead8" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M44 80 C120 88 196 88 272 80 C196 92 118 92 44 80 Z" fill="url(#ht-gold)"/>
+      <text x="158" y="70" text-anchor="middle" font-family="'Gochi Hand', cursive" font-size="28"
+            fill="#e03131" letter-spacing="1">TRUST THE SPIRAL</text>
+      <use href="#sp4" x="30" y="-12" width="22" height="22" color="#f2c230"/>
+      <use href="#sp4" x="272" y="98" width="18" height="18" color="#35d0c0"/>
+    </symbol>
+
+    <!-- ══ 6 · GLITCH FRAGMENT ══ -->
+    <path id="bl-glitch" d="M28 22 C82 12 148 14 178 24 C190 50 190 96 180 140 L158 132 L162 152 C120 164 66 162 30 152 C18 110 18 60 28 22 Z"/>
+    <symbol id="st-glitch" viewBox="-14 -16 232 210">
+      <use href="#bl-glitch" transform="translate(7,10)" fill="url(#ht-night)"/>
+      <use href="#bl-glitch" fill="#fff" stroke="#fff" stroke-width="15" stroke-linejoin="round"/>
+      <path d="M40 34 C86 26 138 27 166 35 C175 56 175 94 168 128 L150 121 L153 138 C118 147 72 146 42 138 C33 104 33 64 40 34 Z"
+            fill="#2b2350" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <rect x="46" y="48" width="118" height="5" fill="#35d0c0" opacity="0.35"/>
+      <rect x="46" y="76" width="118" height="4" fill="#35d0c0" opacity="0.25"/>
+      <rect x="46" y="104" width="112" height="5" fill="#8af25e" opacity="0.3"/>
+      <text x="56" y="70" font-family="'DejaVu Sans Mono', monospace" font-size="22" fill="#35d0c0">▓▒░ 404</text>
+      <text x="56" y="100" font-family="'DejaVu Sans Mono', monospace" font-size="17" fill="#8af25e">&gt;spiral_✦</text>
+      <text x="56" y="126" font-family="'DejaVu Sans Mono', monospace" font-size="13" fill="#cfc3e8" opacity="0.8">no such norm</text>
+      <path d="M166 60 h14 M166 66 h9" stroke="#e03131" stroke-width="4" stroke-linecap="round"/>
+      <use href="#sp4" x="160" y="18" width="18" height="18" color="#8af25e"/>
+    </symbol>
+
+    <!-- ══ 7 · THE PROPHET FROG ══ -->
+    <path id="bl-frog" d="M60 34 C70 16 96 16 104 32 C112 16 138 16 148 34 C178 44 196 78 194 116 C192 158 154 190 104 191 C54 192 14 160 12 118 C10 80 30 46 60 34 Z"/>
+    <symbol id="st-frog" viewBox="-14 -18 232 232">
+      <use href="#bl-frog" transform="translate(7,10)" fill="url(#ht-night)"/>
+      <use href="#bl-frog" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+      <path d="M66 46 C72 32 92 32 98 44 C100 50 108 50 110 44 C116 32 136 32 142 46 C166 56 180 82 178 112 C176 148 144 175 104 176 C64 177 30 150 28 116 C26 84 42 56 66 46 Z"
+            fill="#cfe6c4" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M58 132 C70 152 138 152 150 130 C144 158 64 158 58 132 Z" fill="url(#ht-night)" opacity="0.5"/>
+      <ellipse cx="104" cy="140" rx="34" ry="22" fill="#e9f2e2" stroke="#2a2438" stroke-width="4"/>
+      <path d="M84 136 h40 M88 146 h32" stroke="#cfe6c4" stroke-width="3" stroke-linecap="round"/>
+      <use href="#lid-eye" transform="translate(82,58) scale(0.8)"/>
+      <use href="#lid-eye" transform="translate(126,58) scale(-0.8,0.8)"/>
+      <path d="M84 92 Q104 104 124 92" fill="none" stroke="#2a2438" stroke-width="4.5" stroke-linecap="round"/>
+      <circle cx="66" cy="84" r="7" fill="url(#ht-red)"/>
+      <circle cx="142" cy="84" r="7" fill="url(#ht-red)"/>
+      <path d="M88 22 L96 10 L104 20 L112 8 L120 20 L128 12 L132 24"
+            fill="#f2c230" stroke="#2a2438" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M52 168 C48 176 56 180 62 174 M156 168 C160 176 152 180 146 174"
+            fill="none" stroke="#2a2438" stroke-width="4.5" stroke-linecap="round"/>
+      <use href="#sp4" x="160" y="30" width="20" height="20" color="#f2c230"/>
+      <use href="#goo" transform="translate(66,110) scale(0.7)"/>
+    </symbol>
+
+    <!-- ══ 8 · SLEEPY SHROOMS ══ -->
+    <path id="bl-shrooms" d="M96 8 C150 6 188 38 190 76 C191 100 176 116 156 122 C160 148 152 178 122 186 C96 193 64 188 48 168 C36 152 38 134 46 120 C24 112 10 92 14 68 C20 32 56 10 96 8 Z"/>
+    <symbol id="st-shrooms" viewBox="-14 -14 232 232">
+      <use href="#bl-shrooms" transform="translate(7,10)" fill="url(#ht-night)"/>
+      <use href="#bl-shrooms" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+      <path d="M94 22 C140 20 172 44 174 72 C175 92 156 104 128 106 C100 108 62 106 44 94 C28 82 32 56 52 40 C64 30 78 23 94 22 Z"
+            fill="#f2cfd8" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M50 88 C90 100 140 100 168 82 C150 100 80 106 50 88 Z" fill="url(#ht-red)"/>
+      <circle cx="74" cy="52" r="9" fill="#fff" stroke="#2a2438" stroke-width="3.5"/>
+      <circle cx="118" cy="42" r="7" fill="#fff" stroke="#2a2438" stroke-width="3.5"/>
+      <circle cx="146" cy="62" r="6" fill="#fff" stroke="#2a2438" stroke-width="3.5"/>
+      <path d="M86 106 C84 130 84 148 88 166 C102 174 122 172 130 164 C132 146 130 124 126 106 Z"
+            fill="#f3ead8" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M92 112 C104 116 116 116 122 112 M94 124 h24" stroke="#cdb9a0" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+      <use href="#lid-eye" transform="translate(98,138) scale(0.62)"/>
+      <use href="#lid-eye" transform="translate(120,138) scale(-0.62,0.62)"/>
+      <path d="M104 152 Q109 156 114 152" fill="none" stroke="#2a2438" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M40 128 C30 132 26 144 30 156 C38 166 54 168 62 160 C66 148 62 134 54 128 C50 125 44 126 40 128 Z"
+            fill="#cfc3e8" stroke="#2a2438" stroke-width="4.5" stroke-linejoin="round"/>
+      <path d="M38 158 C40 168 42 174 46 180 M52 160 C54 168 54 174 52 180" stroke="#2a2438" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <use href="#goo" transform="translate(70,36) scale(0.8)"/>
+      <use href="#sp4" x="156" y="118" width="20" height="20" color="#8f7fc0"/>
+    </symbol>
+
+    <!-- ══ 9 · POTION OF UNEXPECTED LIFE ══ -->
+    <path id="bl-potion" d="M76 8 C90 4 116 4 128 10 C136 22 134 34 130 44 C166 64 186 100 182 138 C178 176 146 196 102 196 C58 196 26 174 24 136 C22 100 42 64 76 44 C72 32 70 20 76 8 Z"/>
+    <symbol id="st-potion" viewBox="-14 -16 230 236">
+      <use href="#bl-potion" transform="translate(7,10)" fill="url(#ht-night)"/>
+      <use href="#bl-potion" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+      <path d="M86 24 C96 20 110 20 118 24 C122 32 121 40 118 48 C118 54 122 58 128 62 C156 78 170 106 167 134 C164 164 138 180 103 180 C68 180 40 162 38 134 C36 106 52 78 78 62 C84 58 88 54 88 48 C85 40 84 32 86 24 Z"
+            fill="#e6f2ef" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M46 118 C58 104 84 96 104 98 C130 100 152 108 160 122 C164 146 146 166 104 166 C62 166 42 146 46 118 Z"
+            fill="#8af25e" stroke="#2a2438" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M50 124 C70 114 134 114 156 126" fill="none" stroke="#35d0c0" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="70" cy="140" r="6" fill="#e6f2ef" opacity="0.9"/>
+      <circle cx="128" cy="148" r="8" fill="#e6f2ef" opacity="0.9"/>
+      <circle cx="98" cy="132" r="4" fill="#e6f2ef" opacity="0.9"/>
+      <use href="#sp4" x="90" y="126" width="26" height="26" color="#f2c230"/>
+      <path d="M84 14 h36 c4 0 6 4 4 8 c-2 5 -42 5 -44 0 c-2 -4 0 -8 4 -8 Z"
+            fill="#cdb9a0" stroke="#2a2438" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M160 130 C166 140 162 148 166 158 C168 166 176 163 174 155 C172 146 166 138 164 130 Z"
+            fill="#8af25e" stroke="#2a2438" stroke-width="4" stroke-linejoin="round"/>
+      <use href="#goo" transform="translate(66,84)"/>
+      <use href="#sp4" x="24" y="52" width="18" height="18" color="#8f7fc0"/>
+    </symbol>
+
+    <!-- ══ 10 · MELTING CANDLE ══ -->
+    <path id="bl-candle" d="M96 2 C110 0 120 10 120 24 C132 30 138 42 134 54 C150 64 158 82 154 100 C160 108 170 118 178 132 C190 154 176 178 148 184 C112 192 64 192 38 178 C18 166 18 142 34 128 C42 120 52 112 58 106 C52 88 58 68 74 56 C70 42 76 30 88 24 C88 14 90 4 96 2 Z"/>
+    <symbol id="st-candle" viewBox="-14 -16 230 236">
+      <use href="#bl-candle" transform="translate(7,10)" fill="url(#ht-night)"/>
+      <use href="#bl-candle" fill="#fff" stroke="#fff" stroke-width="15" stroke-linejoin="round"/>
+      <path d="M36 150 C66 138 140 138 168 152 C178 160 174 170 160 174 C118 184 74 184 46 172 C32 166 30 156 36 150 Z"
+            fill="#f2c230" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M74 66 C72 96 72 124 76 152 C96 160 116 160 130 152 C134 122 132 94 128 66 C112 58 90 58 74 66 Z"
+            fill="#f3ead8" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M74 70 C70 84 74 94 68 104 C64 112 72 116 76 108 C80 98 76 82 78 70 Z"
+            fill="#f3ead8" stroke="#2a2438" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M128 72 C132 84 128 96 134 108 C138 116 146 112 142 104 C136 92 134 82 132 72 Z"
+            fill="#f3ead8" stroke="#2a2438" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M80 148 C98 154 116 154 126 148 C114 158 90 158 80 148 Z" fill="url(#ht-gold)"/>
+      <use href="#lid-eye" transform="translate(90,102) scale(0.62)"/>
+      <use href="#lid-eye" transform="translate(116,102) scale(-0.62,0.62)"/>
+      <path d="M98 122 Q103 126 108 122" fill="none" stroke="#2a2438" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M101 58 V46" stroke="#2a2438" stroke-width="4.5" stroke-linecap="round"/>
+      <path d="M101 12 C112 22 112 34 101 44 C90 34 90 22 101 12 Z"
+            fill="#f2c230" stroke="#2a2438" stroke-width="4.5" stroke-linejoin="round"/>
+      <path d="M101 26 C105 30 105 36 101 40 C97 36 97 30 101 26 Z" fill="#e03131"/>
+      <circle cx="101" cy="30" r="22" fill="url(#ht-gold)" opacity="0.6"/>
+      <use href="#sp4" x="132" y="20" width="18" height="18" color="#f2c230"/>
+      <use href="#goo" transform="translate(86,80) scale(0.7)"/>
+    </symbol>
+
+    <!-- ══ 11 · CRYSTAL CLUSTER ══ -->
+    <path id="bl-crystal" d="M96 4 C108 2 118 12 120 26 C134 18 152 24 158 40 C166 60 160 76 166 94 C176 122 172 156 148 172 C112 194 62 190 38 166 C18 146 20 116 32 96 C40 82 38 64 44 48 C52 26 74 8 96 4 Z"/>
+    <symbol id="st-crystal" viewBox="-14 -14 232 232">
+      <use href="#bl-crystal" transform="translate(7,10)" fill="url(#ht-night)"/>
+      <use href="#bl-crystal" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+      <path d="M44 152 C70 142 132 142 160 154 C168 160 164 168 152 170 C116 178 78 178 52 168 C40 164 38 156 44 152 Z"
+            fill="#2b2350" stroke="#2a2438" stroke-width="4.5" stroke-linejoin="round"/>
+      <path d="M92 20 C100 16 106 20 108 30 L116 148 C102 154 92 154 80 148 Z"
+            fill="#cfc3e8" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M52 62 C58 52 68 52 74 60 L84 150 C72 156 62 154 54 148 Z"
+            fill="#e9e2f6" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M132 48 C140 40 150 44 152 54 L148 150 C136 158 124 156 116 148 Z"
+            fill="#b9a8dd" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M98 34 L96 140 M62 70 L66 142 M138 60 L134 144" stroke="#35d0c0" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+      <path d="M100 44 L106 46 L104 78 L99 76 Z" fill="#fff" opacity="0.85"/>
+      <path d="M56 76 L61 78 L62 104 L57 102 Z" fill="#fff" opacity="0.8"/>
+      <use href="#sp4" x="26" y="30" width="22" height="22" color="#f2c230"/>
+      <use href="#sp4" x="152" y="18" width="17" height="17" color="#35d0c0"/>
+      <use href="#sp4" x="160" y="108" width="14" height="14" color="#8f7fc0"/>
+    </symbol>
+
+    <!-- ══ 12 · ZINE DEBRIS (googly eyes + crayon nub) ══ -->
+    <path id="bl-debris" d="M30 30 C80 12 150 14 180 30 C192 52 190 84 182 110 C188 128 184 152 168 162 C130 180 62 178 34 160 C20 150 18 128 26 112 C16 86 18 52 30 30 Z"/>
+    <symbol id="st-debris" viewBox="-14 -14 232 216">
+      <use href="#bl-debris" transform="translate(7,10)" fill="url(#ht-night)"/>
+      <use href="#bl-debris" fill="#fff" stroke="#fff" stroke-width="15" stroke-linejoin="round"/>
+      <path d="M42 42 C86 28 142 30 168 42 C177 60 176 86 169 106 C174 122 170 140 158 148 C126 162 70 160 46 146 C35 138 34 120 40 108 C32 86 33 58 42 42 Z"
+            fill="#f3ead8" stroke="#2a2438" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M42 42 L60 52 L52 64 Z M169 106 L154 112 L162 122 Z" fill="url(#ht-lav)" stroke="none"/>
+      <use href="#googly" transform="translate(76,72)"/>
+      <use href="#googly" transform="translate(116,70) scale(0.85)"/>
+      <path d="M48 118 L128 106 C138 105 142 110 143 116 C144 122 141 127 132 128 L52 140 C46 134 46 126 48 118 Z"
+            fill="#e03131" stroke="#2a2438" stroke-width="4.5" stroke-linejoin="round"/>
+      <path d="M48 118 L42 132 L52 140 Z" fill="#f2cfd8" stroke="#2a2438" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M84 116 L110 112" stroke="#f3ead8" stroke-width="8" stroke-linecap="round"/>
+      <text x="78" y="126" font-family="'Comic Neue', sans-serif" font-weight="700" font-size="11" fill="#2a2438" transform="rotate(-8 78 126)">feral</text>
+      <text x="132" y="58" font-family="'Gochi Hand', cursive" font-size="15" fill="#8f7fc0" transform="rotate(6 132 58)">real ✦</text>
+      <use href="#sp4" x="150" y="126" width="18" height="18" color="#f2c230"/>
+    </symbol>
+
+  </defs>
+</svg>
+<!-- ═══ SHEET ONE · LUNAR GNOSIS ═══ -->
+<section class="page">
+  <header class="sheet-head">
+    <h1>SpiralSighted Marks <span class="fx">✦</span> sheet one</h1>
+    <p>lunar gnosis · print on full-sheet sticker paper · cut along the white borders</p>
+  </header>
+  <div class="grid">
+    <svg class="r1" viewBox="-14 -14 232 240" width="225"><use href="#st-moon"/></svg>
+    <svg class="r2" viewBox="-14 -14 234 234" width="225"><use href="#st-fullmoon"/></svg>
+    <svg class="r3" viewBox="-14 -14 232 246" width="225"><use href="#st-star"/></svg>
+    <svg class="r4" viewBox="-14 -14 234 234" width="222"><use href="#st-sigil"/></svg>
+    <svg class="r3" viewBox="-16 -20 348 168" width="305"><use href="#st-banner"/></svg>
+    <svg class="r2" viewBox="-14 -16 232 210" width="218"><use href="#st-glitch"/></svg>
+  </div>
+  <footer class="sheet-foot">SpiralSightedVisions · personal use, print forever <span class="hand">· trust the spiral ✦</span></footer>
+</section>
+
+<!-- ═══ SHEET TWO · FAMILIAR SPECIMENS ═══ -->
+<section class="page">
+  <header class="sheet-head">
+    <h1>SpiralSighted Marks <span class="fx">✦</span> sheet two</h1>
+    <p>familiar specimens · print on full-sheet sticker paper · cut along the white borders</p>
+  </header>
+  <div class="grid">
+    <svg class="r2" viewBox="-14 -18 232 232" width="228"><use href="#st-frog"/></svg>
+    <svg class="r1" viewBox="-14 -14 232 232" width="228"><use href="#st-shrooms"/></svg>
+    <svg class="r4" viewBox="-14 -16 230 236" width="224"><use href="#st-potion"/></svg>
+    <svg class="r3" viewBox="-14 -16 230 236" width="224"><use href="#st-candle"/></svg>
+    <svg class="r1" viewBox="-14 -14 232 232" width="224"><use href="#st-crystal"/></svg>
+    <svg class="r2" viewBox="-14 -14 232 216" width="226"><use href="#st-debris"/></svg>
+  </div>
+  <footer class="sheet-foot">SpiralSightedVisions · personal use, print forever <span class="hand">· the frog has seen it ✦</span></footer>
+</section>
+</body></html>

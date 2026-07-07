@@ -1,0 +1,75 @@
+/* SpiralSighted Marks — sticker sheet print styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page { size: __PAGE_SIZE__; margin: 0; }
+
+html, body {
+  background: #f5f2fb;
+  font-family: 'Comic Neue', sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  width: __PAGE_W__;
+  height: __PAGE_H__;
+  page-break-after: always;
+  break-after: page;
+  position: relative;
+  background: #f5f2fb;
+  padding: 0.5in 0.55in 0.42in;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.page:last-child { page-break-after: auto; }
+
+.sheet-head { text-align: center; margin-bottom: 4pt; }
+.sheet-head h1 {
+  font-family: 'Gochi Hand', cursive;
+  font-weight: 400;
+  font-size: 26pt;
+  color: #2b2350;
+  letter-spacing: 0.02em;
+}
+.sheet-head h1 .fx { color: #e03131; }
+.sheet-head p {
+  font-family: 'Comic Neue', sans-serif;
+  font-weight: 700;
+  font-size: 9pt;
+  color: #8f7fc0;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 1pt;
+}
+
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 4pt 10pt;
+}
+.grid svg { display: block; }
+.r1 { transform: rotate(-4deg); }
+.r2 { transform: rotate(3deg); }
+.r3 { transform: rotate(-2deg); }
+.r4 { transform: rotate(5deg); }
+.wide { grid-column: 1 / -1; }
+
+.sheet-foot {
+  margin-top: 4pt;
+  text-align: center;
+  font-family: 'Comic Neue', sans-serif;
+  font-weight: 700;
+  font-size: 8.5pt;
+  color: #2b2350;
+}
+.sheet-foot .hand {
+  font-family: 'Gochi Hand', cursive;
+  font-weight: 400;
+  color: #8f7fc0;
+  font-size: 10pt;
+}
