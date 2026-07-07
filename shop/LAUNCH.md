@@ -4,15 +4,17 @@ Goal: **$1/day passive** ($30/mo). First product: The Forager's Grimoire at $9
 → ~3–4 sales/month to hit target.
 
 ## Status
-- [x] Product built — 23-page printable grimoire, US Letter + A4 PDFs (`forager-grimoire/dist/`)
-- [x] Customer bundle zipped (`dist/The-Foragers-Grimoire.zip`)
-- [x] Listing images rendered (`dist/marketing/` — hero, what's-inside, pin)
-- [x] Listing copy written (`forager-grimoire/LISTING.md`)
+- [x] **Vol. I — The Forager's Grimoire** built: PDFs, zip, images, listing copy ($9)
+- [x] **Vol. II — The Witch's Almanac** built: PDFs, zip, images, listing copy ($12)
+- [x] Brand style guide with Wyld register + sticker product spec (`STYLE.md`)
 - [ ] **Shopify connector reconnected** ← the one thing Claude needs from Ellis
-- [ ] Product created on Shopify (Claude can do via connector)
-- [ ] Digital delivery attached (Shopify Digital Downloads app — manual, ~3 min)
-- [ ] Product set ACTIVE + on Online Store channel
+      (claude.ai → Settings → Connectors → Shopify → re-authorize)
+- [ ] Both products created on Shopify (Claude, via connector — say "go")
+- [ ] "The Archivist's Set — Vols. I & II" bundle product at $17 (Claude)
+- [ ] Digital delivery attached to each (Shopify Digital Downloads app — manual, ~3 min each)
+- [ ] Products set ACTIVE + on Online Store channel
 - [ ] First 5 pins posted to Pinterest (see MARKETING.md)
+- [ ] Next build: **Wyld Marks sticker sheets** ($6), then **Samhain Papers** capsule (Sept)
 
 ## Step 1 — Reconnect Shopify (Ellis, ~1 min)
 The connector token expired mid-session. Re-authorize the Shopify connector in
