@@ -6,7 +6,7 @@ the policy. One epoch over GSM8K's 7,473 training questions is 29 steps.
 
 This is a real training run — it costs real GPU time. Start with --steps 2.
 
-    uv run --project river --extra rl river/rl.py --steps 2
+    uv run --extra rl rl.py --steps 2
 """
 
 import argparse

@@ -2,7 +2,7 @@
 
 Run this first. If it prints a completion at the bottom, everything works.
 
-    uv run --project river river/check_setup.py
+    uv run check_setup.py
 """
 
 import sys

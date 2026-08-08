@@ -3,7 +3,7 @@
 A trivial pattern, so a tiny dataset and ~15 steps are enough to learn it — the
 point is to verify the whole training loop end to end.
 
-    uv run --project river river/sft.py
+    uv run sft.py
 """
 
 import river_client as river

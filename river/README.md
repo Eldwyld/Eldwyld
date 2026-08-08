@@ -1,4 +1,4 @@
-# River API
+# river-lab
 
 Scripts for sampling from and fine-tuning hosted models through
 [River](https://river.ai).
@@ -10,16 +10,15 @@ River's client requires **Python 3.12+**. The easiest way to get that is
 interpreter and virtualenv for you:
 
 ```bash
-# from the repo root
-uv sync --project river
+uv sync
 ```
 
 Then add your API key. Create one on the **API Keys** page of the River console
 and put it in a local `.env` file:
 
 ```bash
-cp river/.env.example river/.env
-# open river/.env and paste your key in
+cp .env.example .env
+# open .env and paste your key in
 ```
 
 `.env` is gitignored, so the key stays on your machine and never gets committed.
@@ -33,7 +32,7 @@ export RIVER_API_KEY="rv_..."
 ## Verify it works
 
 ```bash
-uv run --project river river/check_setup.py
+uv run check_setup.py
 ```
 
 This checks the key, connects, lists the models your key can use, and generates
@@ -48,11 +47,11 @@ one short completion. If it prints `Setup is working.` you're done.
 | `rl.py` | RL on GSM8K with group-relative advantages. One epoch is 29 steps; reward climbs ~0.04 → ~0.93. |
 
 ```bash
-uv run --project river river/sft.py
+uv run sft.py
 
 # rl.py needs the extra dataset deps, and is a real training run —
 # start small before committing to a full epoch
-uv run --project river --extra rl river/rl.py --steps 2
+uv run --extra rl rl.py --steps 2
 ```
 
 ## Notes

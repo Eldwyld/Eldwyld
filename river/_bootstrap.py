@@ -30,7 +30,7 @@ def get_api_key() -> str:
             "RIVER_API_KEY is not set.\n\n"
             "Set it one of two ways:\n"
             "  1. export RIVER_API_KEY='rv_...'\n"
-            "  2. cp river/.env.example river/.env  and paste your key into it\n"
+            "  2. cp .env.example .env  and paste your key into it\n"
         )
     if not key.startswith("rv_"):
         print(
